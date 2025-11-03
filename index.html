@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SimulaZap — Simulador de Financiamento via WhatsApp</title>
+  <meta name="description" content="Simule financiamento imobiliário em segundos pelo WhatsApp. Parcelas, prazo, PDF — tudo direto no zap." />
+  <meta property="og:title" content="SimulaZap — Simulador de Financiamento via WhatsApp" />
+  <meta property="og:description" content="Simule financiamento imobiliário em segundos pelo WhatsApp. Parcelas, prazo, PDF — tudo direto no zap." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo.png" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="icon" href="logo.png" />
+  <style>
+    :root{
+      --bg1:#0f172a; /* slate-900 */
+      --bg2:#111827; /* gray-900 */
+      --fg:#e5e7eb;  /* gray-200 */
+      --muted:#9ca3af; /* gray-400 */
+      --primary:#22c55e; /* green-500 */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,Arial,sans-serif;
+      color:var(--fg);
+      background: radial-gradient(1200px 800px at 80% 10%, #1e293b 0%, transparent 60%),
+                  radial-gradient(1000px 1200px at 10% 80%, #0b1220 0%, transparent 60%),
+                  linear-gradient(160deg,var(--bg1),var(--bg2));
+      display:grid; place-items:center;
+    }
+    .container{ width:min(980px, 92vw); text-align:center; padding:32px }
+    .logo{ width:min(220px, 40vw); aspect-ratio:1/1; border-radius:50%; box-shadow:0 20px 60px rgba(0,0,0,.4); }
+    h1{ font-size:clamp(28px, 4vw, 48px); line-height:1.1; margin:24px 0 12px }
+    p.desc{ font-size:clamp(16px, 2.4vw, 20px); color:var(--muted); margin:0 auto 28px; max-width:700px }
+    .cta{ display:inline-flex; align-items:center; gap:12px; padding:16px 22px; border-radius:999px; font-weight:700; letter-spacing:.2px;
+          background:linear-gradient(135deg, #16a34a, #22c55e 60%); color:#031b09; text-decoration:none; box-shadow:0 10px 30px rgba(34,197,94,.35);
+          transition:transform .15s ease, filter .15s ease }
+    .cta:hover{ transform:translateY(-2px); filter:saturate(1.1) }
+    .cta:active{ transform:translateY(0) }
+    .cta svg{ width:22px; height:22px }
+    .sub{ margin-top:16px; color:#a3a3a3; font-size:14px }
+    footer{ position:fixed; inset:auto 0 14px; text-align:center; color:#6b7280; font-size:12px }
+    .mono{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace }
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <!-- Coloque seu arquivo logo em ./logo.png (PNG quadrado).  -->
+    <img class="logo" src="logo.png" alt="Logo do SimulaZap" />
+
+    <h1>SimulaZap</h1>
+    <p class="desc">Simule financiamento imobiliário em <strong>segundos</strong> pelo WhatsApp. Parcelas, prazos, comparação de tabelas e PDF automático — simples, rápido e direto no Whatsapp.</p>
+
+    <!-- Substitua 55DDDNUMERO abaixo pelo seu número com DDI/DDD.  -->
+    <a class="cta" href="https://wa.me/5521920231716?text=Simular!" target="_blank" rel="noopener">
+      <!-- Ícone WhatsApp (inline SVG, leve) -->
+      <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true" focusable="false"><path d="M19.11 17.47c-.29-.14-1.71-.84-1.98-.94-.27-.1-.46-.14-.66.14-.19.29-.76.94-.94 1.13-.17.19-.35.21-.64.07-.29-.14-1.22-.45-2.33-1.44-.86-.76-1.44-1.7-1.61-1.98-.17-.29-.02-.45.12-.59.12-.12.29-.31.43-.47.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.66-1.59-.91-2.18-.24-.58-.49-.5-.66-.5-.17 0-.36-.02-.55-.02s-.5.07-.76.36c-.26.29-1 1-1 2.42s1.02 2.8 1.16 2.99c.14.19 2.01 3.06 4.88 4.29.68.29 1.21.46 1.62.59.68.22 1.29.19 1.78.12.54-.08 1.71-.7 1.95-1.38.24-.67.24-1.25.17-1.38-.07-.14-.26-.22-.55-.36zM16 3C8.82 3 3 8.82 3 16c0 2.3.62 4.46 1.69 6.32L3 29l6.84-1.79A12.97 12.97 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3z"/></svg>
+      Iniciar
+    </a>
+   </main>
+
+  <footer>
+    © <span id="y"></span> SimulaZap. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
